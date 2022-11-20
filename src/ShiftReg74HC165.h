@@ -1,6 +1,8 @@
 #ifndef SHIFT_REG_74HC165_H
 #define SHIFT_REG_74HC165_H
 
+#include <Arduino.h>
+
 class ShiftReg74HC165 {
 
 
