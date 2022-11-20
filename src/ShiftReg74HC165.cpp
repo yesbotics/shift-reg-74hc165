@@ -27,7 +27,8 @@ byte ShiftReg74HC165::read() {
     digitalWrite(this->pinClockEnable_, HIGH);
     digitalWrite(this->pinParallelLoad_, LOW);
     delayMicroseconds(PULSE_WIDTH_USEC);
-    digitalWrite(this->pinClockEnable_, LOW);
+    digitalWrite(pinParallelLoad_, HIGH);
+    digitalWrite(pinClockEnable_, LOW);
 
     // Loop to read each bit value from the serial out line of the ShiftReg74HC165
     for (int i = 0; i < DATA_WIDTH; i++) {
